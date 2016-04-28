@@ -7,7 +7,7 @@
             prefetch: true,
             pageCacheSize: 4,
             onStart: {
-                duration: 250,
+                duration: 3000,
                 render: function (url, $container) {
                     $body.animate({
                         scrollTop: 0

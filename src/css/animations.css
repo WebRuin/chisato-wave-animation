@@ -3,8 +3,8 @@
  * Don't forget to add vendor prefixes!
  */
 .m-scene .scene_element {
-  width: 130vw;
-  height: 80vh;
+  width: 180vw;
+  height: 100vh;
 
   position: absolute;
   z-index: 30;
@@ -20,7 +20,7 @@
   -ms-transform: skewX(-20deg); /* IE 9 */
   -webkit-transform: skewX(-20deg); /* Safari */
   transform: skewX(-20deg); /* Standard syntax */
-  animation-duration: 0.25s;
+  animation-duration: 2s;
   transition-timing-function: ease-in;
   animation-fill-mode: both;
 }

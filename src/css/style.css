@@ -7,6 +7,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: scroll;
   background-color: #CAC9F7;
 }
 
@@ -24,6 +25,10 @@ header {
   position: absolute;
   bottom: -350px;
   z-index: 2;
+  animation-name: wavy1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 .sea2 {
   width: 200vw;
@@ -32,17 +37,38 @@ header {
   position: absolute;
   bottom: -364px;
   z-index: 2;
+  animation-name: wavy2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 .sea3 {
   width: 200vw;
   height: 75vh;
-  transform: rotate(2deg);
   background-color: #2C3982;
   position: absolute;
   bottom: -390px;
   left: -20px;
   z-index: 2;
+  animation-name: wavy1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
+  /*
+   * Sea Keyframes
+   */
+  @keyframes wavy1 {
+    0% { transform: rotate(0.5deg); }
+    100% { transform: rotate(0deg); }
+    /*100% { transform: rotate(-0.5deg); }*/
+  }
+  @keyframes wavy2 {
+    0% { transform: rotate(-0.5deg); }
+    100% { transform: rotate(0deg); }
+    /*100% { transform: rotate(0.5deg); }*/
+  }
+
 ul.buoys {
   position: relative;
   top: 50vh;
