@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="m-scene">
-    <div class="scene_element scene_element--fadein wave" id="wave"></div>
+    <div class="scene_element scene_element--fadein" id="wave"></div>
     <header role="heading">
       <ul class="buoys" role="navigation">
         <li class="buoy-1"><a href="index.html">Home</a></li>
@@ -16,11 +16,17 @@
         <li class="buoy-2"><a href="page2.html">Link 2</a></li>
         <li class="buoy-3"><a href="page3.html">Link 3</a></li>
       </ul>
-      <div class="sea1"></div>
-      <div class="sea2"></div>
-      <div class="sea3"></div>
+      <div class="video-container">
+        <div class="filter"></div>
+        <video autoplay loop class="fillWidth">
+          <source src="assets/videos/Coverr-beach2.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+          <source src="assets/videos/Coverr-beach2.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <!-- <div class="poster hidden">
+          <img src="assets/videos/Coverr-beach2.jpg" alt="">
+        </div>
+      </div>-->
     </header>
-
     <section>
       <h1>Pages 2</h1>
       <article class="story">
