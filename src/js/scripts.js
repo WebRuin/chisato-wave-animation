@@ -28,9 +28,9 @@
       },
       smoothState = $wave.smoothState(options).data('smoothState');
 
-  /*******************
-  / Coverr Video JS
-  *******************/
+    /*******************
+    / Coverr Video JS
+    *******************/
     scaleVideoContainer();
 
     initBannerVideoSize('.video-container .poster img');
@@ -43,6 +43,35 @@
         scaleBannerVideoSize('.video-container .filter');
         scaleBannerVideoSize('.video-container video');
     });
+
+    /*****************************
+    / Coverr Video JS Reflection
+    *****************************/
+
+    document.addEventListener('DOMContentLoaded', function(){
+      var v = document.getElementById('header-video'),
+          vch = document.getElementById('video-container').offsetHeight,
+          vcw = document.getElementById('video-container').offsetWidth,
+          canvas = document.getElementById('reflection'),
+          context = canvas.getContext('2d');
+
+      var cw = vcw;
+      var ch = vch;
+      canvas.width = cw;
+      canvas.height = ch;
+
+      v.addEventListener('play', function(){
+          draw(this,context,cw,ch);
+      },false);
+
+  },false);
+
+  function draw(v,c,w,h) {
+      if(v.paused || v.ended) return false;
+      c.drawImage(v,0,0,w,h);
+      setTimeout(draw,20,v,c,w,h);
+  }
+
 })(jQuery);
 
 /*************************

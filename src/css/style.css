@@ -7,14 +7,47 @@ html {
 
 body {
   margin: 0;
+  color: #eee;
   overflow-x: scroll;
-  background-color: #CAC9F7;
+  background-color: #000;
 }
 
 header {
   height: 70vh;
   overflow: hidden;
   position: relative;
+}
+
+h1 {
+  margin-top: 300px;
+}
+
+.reflection {
+    position: relative;
+    margin: 0 auto;
+    top: 300px; left: 0;
+    width: 100vw;
+    overflow: hidden;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    transform: rotate(180deg);
+    opacity: .5;
+    z-index: -1;
+  }
+  .reflection::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    height: inherit;
+    width: inherit;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 13%, rgba(0,0,0,0.98) 64%, rgba(0,0,0,1) 65%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 13%,rgba(0,0,0,0.98) 64%,rgba(0,0,0,1) 65%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 13%,rgba(0,0,0,0.98) 64%,rgba(0,0,0,1) 65%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 
 ul.buoys {
@@ -80,9 +113,6 @@ li.buoy-1, li.buoy-2, li.buoy-3, li.buoy-4 {
 
 article {
   padding: 1em;
-  background: rgb(167,193,209); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(167,193,209,1) 0%, rgba(148,165,186,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(167,193,209,1) 0%,rgba(148,165,186,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(167,193,209,1) 0%,rgba(148,165,186,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7c1d1', endColorstr='#94a5ba',GradientType=0 ); /* IE6-9 */
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
